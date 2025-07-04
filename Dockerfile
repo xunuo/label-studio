@@ -18,6 +18,9 @@ FROM heartexlabs/label-studio:latest
 
 USER root
 
+RUN chown :0 /label-studio/data
+
+
 # 暴露默认端口
 EXPOSE 8080
 
