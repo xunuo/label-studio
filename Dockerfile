@@ -5,12 +5,13 @@ FROM heartexlabs/label-studio:latest
 USER root
 
 # 确保目录存在，并把它的组所有者设为 root 组 (GID 0)，同时给组写权限
-RUN mkdir -p /label-studio/data \
-    && chown :0 /label-studio/data \
-    && chmod g+rwx /label-studio/data
+# RUN mkdir -p /label-studio/data \
+#     && chown :0 /label-studio/data \
+#     && chmod g+rwx /label-studio/data
 
-# RUN chown -R 1001:1001 /label-studio/data \
-#     && chmod -R u+rwx /label-studio/data
+RUN mkdir -p /label-studio/data \
+    && chown -R 1001:1001 /label-studio/data \
+    && chmod -R u+rwx /label-studio/data
 
 # 切回 Label Studio 默认运行用户
 USER 1001
