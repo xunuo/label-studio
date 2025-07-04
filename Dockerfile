@@ -16,6 +16,8 @@ FROM heartexlabs/label-studio:latest
 # # 切回 Label Studio 默认运行用户
 # USER 1001
 
+USER root
+
 # 暴露默认端口
 EXPOSE 8080
 
