@@ -16,9 +16,9 @@ FROM heartexlabs/label-studio:latest
 # # 切回 Label Studio 默认运行用户
 # USER 1001
 
-USER root
+# USER root
 
-RUN chown :0 /label-studio/data
+# RUN chown :0 /label-studio/data
 
 
 # 暴露默认端口
